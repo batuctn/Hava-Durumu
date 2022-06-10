@@ -1,0 +1,39 @@
+<div>
+           
+            <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+                <InputLabel htmlFor="standard-adornment-password">Username</InputLabel>
+                <Input
+                    endAdornment={
+                        <InputAdornment position="end">
+                            <AccountCircle sx={{ display:"flex",justifyContent:"right", color: 'action.active', mr: 1, my: 0.5 }} />
+                        </InputAdornment>
+                    }
+                />
+            </FormControl>
+            </div>
+            <div>
+            <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+                <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+                <Input
+                    id="standard-adornment-password"
+                type={values.showPassword ? 'text' : 'password'}
+                value={values.password}
+                onChange={handleChange('password')}
+                endAdornment={
+                <InputAdornment  sx={{display:"flex"}} position="end">
+                    <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                    >
+                        {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                </InputAdornment>
+            }
+        />
+        </FormControl>
+       </div>
+            <div>
+                <Button size={"small"} variant={"contained"}>Giriş</Button>
+            </div>
+    </div>
